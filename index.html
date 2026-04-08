@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal | Form Access</title>
+    <style>
+        :root {
+            --primary: #1a202c;
+            --accent: #3182ce;
+            --bg: #f7fafc;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* The Professional Card */
+        .card {
+            background: white;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            border: 1px solid #e2e8f0;
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            background: #ebf8ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 24px;
+        }
+
+        /* SVG Icon for a professional look */
+        .icon-box svg {
+            width: 32px;
+            height: 32px;
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        /* The High-End Button */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            width: 100%;
+            border: 1px solid var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #2d3748;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Subtle Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 4px;
+            background: #edf2f7;
+            border-radius: 10px;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 2s linear;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon-box">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+        </div>
+        
+        <h1>Welcome to Database</h1>
+        <p>You are being securely redirected to the Database portal. Please ensure your connection is stable.</p>
+        
+        <a href="https://n8n-56.onrender.com/form/6d0ffc2a-4812-4493-9b4a-c5c27dc5bac6" class="btn-primary">
+            Go to Main page
+        </a>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="pbar"></div>
+        </div>
+    </div>
+
+    <script>
+        // Start the progress bar and redirect
+        window.onload = function() {
+            document.getElementById('pbar').style.width = '100%';
+            setTimeout(function() {
+                window.location.href = "https://n8n-56.onrender.com/form/6010cd80-255c-4f1a-99d5-051e1d7ac3f4";
+            }, 2500); // 2.5 seconds to allow the bar to fill
+        };
+    </script>
+</body>
+</html>
